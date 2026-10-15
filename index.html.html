@@ -1,0 +1,232 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>After Midterms Reading List</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@500;700;800&display=swap">
+<style>
+/* Layout: one soft centered column, a progress pill up top, then two shelves (most wanted, then the rest) of tickable book cards. */
+:root {
+  --bg: #fff0f4;
+  --card: #ffffff;
+  --ink: #4b2a40;
+  --ink-soft: #8d6a80;
+  --pink: #f06a9c;
+  --pink-soft: #ffd9e6;
+  --lilac: #e6dafb;
+  --lilac-ink: #6a4aa8;
+  --butter: #ffe08a;
+  --butter-soft: #fff4cf;
+  --butter-ink: #8a5a00;
+  --line: #f4cddb;
+  --font-display: "Bagel Fat One", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+  --font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #241528; --card: #33203a; --ink: #fbe8f1; --ink-soft: #c9a5bb;
+    --pink: #ff86b2; --pink-soft: #4d2a42; --lilac: #43325f; --lilac-ink: #d8c6ff;
+    --butter: #ffd666; --butter-soft: #46391f; --butter-ink: #ffe9a8; --line: #4d3358;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #241528; --card: #33203a; --ink: #fbe8f1; --ink-soft: #c9a5bb;
+  --pink: #ff86b2; --pink-soft: #4d2a42; --lilac: #43325f; --lilac-ink: #d8c6ff;
+  --butter: #ffd666; --butter-soft: #46391f; --butter-ink: #ffe9a8; --line: #4d3358;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+  padding-block: 28px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+
+header { display: flex; flex-direction: column; gap: 14px; }
+.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); }
+h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 9vw, 42px);
+  line-height: 1.05;
+  margin: 0;
+  text-wrap: balance;
+  display: flex; align-items: flex-start; gap: 8px;
+}
+h1 svg { flex: none; width: 30px; height: 30px; margin-top: 2px; }
+
+.progress { background: var(--card); border: 2px solid var(--line); border-radius: 999px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; }
+.bar { flex: 1; min-width: 0; height: 12px; border-radius: 999px; background: var(--pink-soft); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; border-radius: 999px; background: var(--pink); transition: width .35s ease; }
+.count { font-weight: 800; font-size: 14px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+section { display: flex; flex-direction: column; gap: 10px; }
+h2 { margin: 0; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; }
+h2 svg { width: 16px; height: 16px; }
+ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+
+.book { display: flex; align-items: center; gap: 14px; background: var(--card); border: 2px solid var(--line); border-radius: 20px; padding: 14px 16px; cursor: pointer; transition: transform .15s ease, background .2s ease; }
+.book:hover { transform: translateY(-1px); }
+.book.star { background: var(--butter-soft); border-color: var(--butter); }
+
+.book input { appearance: none; -webkit-appearance: none; flex: none; width: 30px; height: 30px; margin: 0; border-radius: 10px; border: 2.5px solid var(--pink); background: var(--card); cursor: pointer; display: grid; place-content: center; transition: background .15s ease, transform .15s ease; }
+.book input:checked { background: var(--pink); transform: scale(1.06); }
+.book input:checked::after { content: ""; width: 16px; height: 16px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8.5l3.5 3.5 7.5-8' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+.book input:focus-visible { outline: 3px solid var(--lilac-ink); outline-offset: 3px; }
+
+.text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.title { font-weight: 800; font-size: 17px; overflow-wrap: anywhere; }
+.author { font-weight: 500; font-size: 13px; color: var(--ink-soft); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; padding: 3px 10px 3px 8px; border-radius: 999px; background: var(--lilac); color: var(--lilac-ink); }
+.tag svg { width: 13px; height: 13px; }
+.tag.most { background: var(--butter); color: var(--butter-ink); }
+
+.book.done .title { text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: var(--pink); opacity: .55; }
+.book.done .tags, .book.done .author { opacity: .55; }
+
+.note { margin: 0; text-align: center; font-weight: 700; font-size: 14px; color: var(--pink); min-height: 1.4em; }
+footer { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; font-size: 13px; color: var(--ink-soft); font-weight: 700; }
+footer span { display: inline-flex; align-items: center; gap: 6px; }
+footer svg { width: 14px; height: 14px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<main>
+  <header>
+    <div class="eyebrow">Unlocks after midterms</div>
+    <h1>
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.4 9.6L29 15l-9.6 3.4L16 28l-3.4-9.6L3 15l9.6-3.4z" fill="var(--butter)" stroke="var(--pink)" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>After Midterms Reading List</span>
+    </h1>
+    <div class="progress">
+      <div class="bar" role="progressbar" aria-label="Books read" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><i id="fill"></i></div>
+      <div class="count" id="count">0 of 7 read</div>
+    </div>
+  </header>
+
+  <section>
+    <h2><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="var(--butter)" stroke="var(--butter-ink)" stroke-width="1.2" stroke-linejoin="round"/></svg>Most wanted</h2>
+    <ul id="top"></ul>
+  </section>
+
+  <section>
+    <h2>Also on the list</h2>
+    <ul id="rest"></ul>
+  </section>
+
+  <p class="note" id="note"></p>
+
+  <footer>
+    <span><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="1" width="8" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="12.5" r="0.9" fill="currentColor"/></svg>Kindle</span>
+    <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5c2.5-.8 4.5-.6 6 .8 1.5-1.4 3.5-1.6 6-.8v9c-2.5-.8-4.5-.6-6 .8-1.5-1.4-3.5-1.6-6-.8z M8 4.3v9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Physical</span>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var ICON_KINDLE = '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="1" width="8" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="12.5" r="0.9" fill="currentColor"/></svg>';
+  var ICON_BOOK = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5c2.5-.8 4.5-.6 6 .8 1.5-1.4 3.5-1.6 6-.8v9c-2.5-.8-4.5-.6-6 .8-1.5-1.4-3.5-1.6-6-.8z M8 4.3v9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  var ICON_STAR = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg>';
+
+  var BOOKS = [
+    { id: "fangs",   title: "Fangs with Benefits",  kindle: true,  star: true },
+    { id: "world",   title: "Part of Your World",   kindle: false, star: true },
+    { id: "nocto",   title: "Noctocadian",          kindle: false, star: true },
+    { id: "kentucky",title: "Kentucky Nights",      kindle: true,  star: false },
+    { id: "black",   title: "Black Lies",           kindle: true,  star: false },
+    { id: "misery",  title: "Misery", author: "Stephen King", kindle: true, star: false },
+    { id: "andnow",  title: "And Now Back To You",  kindle: false, star: false }
+  ];
+
+  var done = {};
+  var LS_KEY = "after-midterms-reading-list";
+  try { var raw = localStorage.getItem(LS_KEY); if (raw) done = JSON.parse(raw) || {}; } catch (e) {}
+
+  function el(tag, cls, html) { var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  function build() {
+    var top = document.getElementById("top"), rest = document.getElementById("rest");
+    BOOKS.forEach(function (b) {
+      var li = el("li");
+      var label = el("label", "book" + (b.star ? " star" : ""));
+      label.id = "row-" + b.id;
+      var cb = el("input"); cb.type = "checkbox"; cb.id = "cb-" + b.id;
+      cb.addEventListener("change", function () { setDone(b.id, cb.checked); });
+      var text = el("div", "text");
+      var t = el("div", "title", esc(b.title));
+      text.appendChild(t);
+      if (b.author) text.appendChild(el("div", "author", "by " + esc(b.author)));
+      var tags = el("div", "tags");
+      tags.appendChild(el("span", "tag", (b.kindle ? ICON_KINDLE + "Kindle" : ICON_BOOK + "Physical")));
+      if (b.star) tags.appendChild(el("span", "tag most", ICON_STAR + "Most wanted"));
+      text.appendChild(tags);
+      label.appendChild(cb); label.appendChild(text);
+      li.appendChild(label);
+      (b.star ? top : rest).appendChild(li);
+    });
+  }
+
+  function render() {
+    var n = 0;
+    BOOKS.forEach(function (b) {
+      var on = !!done[b.id]; if (on) n++;
+      var cb = document.getElementById("cb-" + b.id);
+      if (cb.checked !== on) cb.checked = on;
+      document.getElementById("row-" + b.id).classList.toggle("done", on);
+    });
+    document.getElementById("fill").style.width = (n / BOOKS.length * 100) + "%";
+    document.getElementById("count").textContent = n + " of " + BOOKS.length + " read";
+    document.querySelector(".bar").setAttribute("aria-valuenow", n);
+    document.getElementById("note").textContent = n === BOOKS.length ? "Every single one. Time for a new list." : "";
+  }
+
+  var dbDoc = null, writing = false, pending = false;
+  function save() {
+    try { localStorage.setItem(LS_KEY, JSON.stringify(done)); } catch (e) {}
+    if (!dbDoc) return;
+    if (writing) { pending = true; return; }
+    writing = true;
+    dbDoc.set({ done: done }).catch(function () {}).then(function () {
+      writing = false;
+      if (pending) { pending = false; save(); }
+    });
+  }
+  function setDone(id, on) {
+    if (on) done[id] = true; else delete done[id];
+    render(); save();
+  }
+
+  build(); render();
+
+  if (window.claude && window.claude.use) {
+    window.claude.use("db").then(function (db) {
+      if (!db) return;
+      dbDoc = db.doc("checklist/state");
+      dbDoc.onSnapshot(function (snap) {
+        if (writing || pending) return;
+        if (snap.exists) {
+          var d = snap.data() || {};
+          done = d.done || {};
+          try { localStorage.setItem(LS_KEY, JSON.stringify(done)); } catch (e) {}
+          render();
+        } else if (Object.keys(done).length) {
+          save();
+        }
+      }, function () {});
+    }).catch(function () {});
+  }
+})();
+</script>
+
+</body></html>
